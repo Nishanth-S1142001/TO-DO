@@ -1,20 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view">
+    xmlns:title="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view"
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/task_calendar"
-            android:title="@string/menu_taskReminder" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_dummy"/>
-    </group>
+    >
+
+<group android:checkableBehavior="single">
+    <item android:id="@+id/item_functions"  android:title="Functions">
+        <menu>
+             <group android:id="@+id/group_functions" android:checkableBehavior="single" android:visible="true">
+                <item
+                    android:id="@+id/nav_home"
+                    android:icon="@drawable/home"
+                    android:title="@string/menu_home"
+                    />
+                <item
+                    android:id="@+id/nav_reminder"
+                    android:icon="@drawable/reminder"
+                    android:title="@string/menu_taskReminder" />
+
+                <item
+                    android:id="@+id/nav_share"
+                    android:icon="@drawable/share_task"
+                    android:title="@string/menu_share" />
+
+                <item
+                    android:id="@+id/nav_favourite"
+                    android:icon="@drawable/favourite"
+                    android:title="@string/menu_favourite" />
+              </group>
+        </menu>
+    </item>
+</group>
+
+
+<group android:checkableBehavior="single">
+    <item android:id="@+id/item_design"  android:title="Design">
+        <menu>
+            <group android:id="@+id/group_design" android:checkableBehavior="single" android:visible="true">
+
+                <item
+                    android:id="@+id/nav_theme"
+                    android:icon="@drawable/palette"
+                    android:title="@string/menu_themes" />
+
+                <item
+                    android:id="@+id/nav_widgets"
+                    android:icon="@drawable/widget"
+                    android:title="@string/menu_widget" />
+
+            </group>
+        </menu>
+    </item>
+</group>
+
+<group android:checkableBehavior="single">
+    <item android:id="@+id/item_importance"  android:title="Importance">
+        <menu>
+            <group android:id="@+id/group_importance" android:checkableBehavior="single" android:visible="true">
+                <item
+                    android:id="@+id/nav_donate"
+                    android:icon="@drawable/donate"
+                    android:title="@string/menu_donate" />
+
+                <item
+                    android:id="@+id/nav_feedback"
+                    android:icon="@drawable/feedback"
+                    android:title="@string/menu_feedback" />
+
+                <item
+                    android:id="@+id/nav_FAQ"
+                    android:icon="@drawable/faq"
+                    android:title="@string/menu_FAQ" /><item
+
+
+                    android:id="@+id/nav_about_us"
+                    android:icon="@drawable/about_us"
+                    android:title="@string/menu_about_us" />
+
+                <item
+                    android:id="@+id/nav_setting"
+                    android:icon="@drawable/settings"
+                    android:title="@string/menu_setting" />
+
+            </group>
+        </menu>
+    </item>
+</group>
+
+<group android:checkableBehavior="single">
+    <item android:id="@+id/item_dummy"  android:title="Dummy">
+        <menu>
+            <group android:id="@+id/dummy" android:checkableBehavior="single" android:visible="true">
+
+                <item
+                    android:id="@+id/nav_slideshow"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="@string/menu_slideshow"/>
+            </group>
+        </menu>
+    </item>
+</group>
+
 </menu>

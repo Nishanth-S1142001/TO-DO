@@ -1,11 +1,7 @@
-package com.example.to_do.ui.Reminder
-import android.app.Activity
+package com.example.to_do.ui.reminder
 import android.app.AlertDialog
 import android.app.DatePickerDialog
-import android.app.Instrumentation.ActivityResult
-import android.app.NotificationManager
 import android.app.TimePickerDialog
-import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
@@ -16,14 +12,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.DatePicker
-import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContract
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.NotificationManagerCompat
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.workDataOf
@@ -37,7 +29,7 @@ import java.util.Date
 import java.util.Locale
 import java.util.concurrent.TimeUnit
 
-class addReminderFragment : Fragment() {
+class ReminderFragment : Fragment() {
 
     private var _binding: FragmentAddreminderBinding? = null
 
@@ -49,11 +41,6 @@ class addReminderFragment : Fragment() {
             View {
         _binding = FragmentAddreminderBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-      //  val textView: TextView = binding.textGallery
-      //  addReminderViewModel.text.observe(viewLifecycleOwner) {
-       //     textView.text = it
-       // }
 
         binding.addReminder.setOnClickListener(View.OnClickListener { addReminder() })
         return root

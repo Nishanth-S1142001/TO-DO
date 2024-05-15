@@ -12,9 +12,9 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.to_do.ui.Reminder.addReminderFragment"
-        android:label="@string/menu_gallery"
+        android:id="@+id/nav_reminder"
+        android:name="com.example.to_do.ui.reminder.ReminderFragment"
+        android:label="@string/menu_taskReminder"
         tools:layout="@layout/fragment_addreminder" />
 
     <fragment

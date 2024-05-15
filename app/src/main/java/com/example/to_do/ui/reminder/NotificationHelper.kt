@@ -1,4 +1,4 @@
-package com.example.to_do.ui.Reminder
+package com.example.to_do.ui.reminder
 
 import android.Manifest
 import android.app.NotificationChannel
