@@ -33,6 +33,8 @@ class MainActivity : AppCompatActivity() {
                 .setAction("Action", null)
                 .setAnchorView(R.id.fab).show()
         } **/
+
+
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
@@ -40,7 +42,9 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_reminder, R.id.nav_slideshow
+                R.id.nav_home, R.id.nav_reminder, R.id.nav_share, R.id.nav_favourite, R.id.nav_theme,
+                R.id.nav_widgets,R.id.nav_donate,R.id.nav_feedback,R.id.nav_FAQ,
+                R.id.nav_about_us,R.id.nav_setting,R.id.nav_slideshow
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
