@@ -8,31 +8,28 @@
     android:orientation="vertical"
     tools:context=".ui.reminder.ReminderFragment">
 
-
-
-
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_marginTop="40sp"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:paddingHorizontal="10sp">
-    <Button
 
-        android:id="@+id/addReminder"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="50dp"
-        android:layout_gravity="start"
-        android:width="10sp"
-        android:height="20dp"
-        android:background="@drawable/button_format_plain"
-        android:text="Reminder?"
-        android:textColor="@color/red"
-        android:textStyle="bold"
 
-        tools:ignore="HardcodedText" />
+        <Button
+
+            android:id="@+id/addReminder"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="50dp"
+            android:layout_gravity="start"
+            android:width="10sp"
+            android:height="20dp"
+            android:background="@drawable/button_format_plain"
+            android:text="Reminder?"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
 
         <Button
 
@@ -50,6 +47,7 @@
             android:textColor="@color/red"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
+
     </LinearLayout>
 
     <View
@@ -62,9 +60,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingRight="20dp"
-        android:gravity="end"
-
-        >
+        android:gravity="end">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabReminder"
@@ -76,6 +72,5 @@
             android:contentDescription="@string/todo"
             android:src="@drawable/home"
                />
-
     </LinearLayout>
 </LinearLayout>
