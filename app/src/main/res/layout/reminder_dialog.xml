@@ -1,51 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardUseCompatPadding="true"
+    android:layout_margin="10dp"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    app:cardBackgroundColor="@color/orange"
     app:cardCornerRadius="15dp"
-    android:layout_margin="10dp">
+    app:cardUseCompatPadding="true">
 
     <LinearLayout
-        android:outlineAmbientShadowColor="@color/black"
-        android:outlineSpotShadowColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/bottom_navigation_bg"
         android:orientation="vertical"
-        android:background="@drawable/bt2">
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
             android:text="ADD REMAINDER"
             android:textColor="@color/white"
-            android:gravity="center"
-            android:textStyle="bold"
             android:textSize="18sp"
-            android:layout_marginTop="10dp"
-            />
+            android:textStyle="bold" />
+
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-            android:layout_height="wrap_content"
             android:id="@+id/tlTitle"
-            android:textColor="@color/white"
-            android:hint="@string/title"
-            app:startIconTint="@color/white"
-            app:hintTextColor="@color/white"
-            app:startIconDrawable="@drawable/calendar"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            app:strokeColor="@color/black"
+            android:hint="@string/title"
+            android:textColor="@color/white"
             app:boxStrokeColor="@color/black"
+            app:hintTextColor="@color/white"
             app:boxStrokeWidth="2dp"
-            >
+            app:startIconDrawable="@drawable/calendar"
+            app:startIconTint="@color/orange"
+            android:textColorHint="@color/red"
+            app:strokeColor="@color/black">
+
+
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
-                android:id="@+id/editTitle"
-                android:gravity="center"
                 android:textStyle="bold"
 
                 />
@@ -57,87 +64,99 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="Reminder Type"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="14sp"/>
+            android:textColorHint="@color/white"
+            android:textColor="@color/orange"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/gray_stroke"
             android:layout_margin="10dp"
+            android:background="@drawable/gray_stroke"
             android:textColor="@color/white"
 
             >
 
             <Spinner
-                android:id="@+id/reminderType"
-                android:textColor="@color/white"
 
+                android:id="@+id/reminderType"
                 android:layout_width="match_parent"
+                android:textAlignment="center"
                 android:layout_height="wrap_content"
-                android:padding="12dp"/>
+                android:background="@drawable/button_format_gradient"
+                android:backgroundTint="#FFFFFF"
+                android:contextClickable="true"
+                android:padding="12dp"
+                android:textColor="@color/white" />
 
 
         </RelativeLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_margin="10dp"
-            android:background="@drawable/gray_stroke"
-            >
+            android:background="@drawable/button_format_gradient"
+            android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/dateTime"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:textColor="@color/white"
                 android:layout_marginStart="10dp"
-                android:text="@string/date_and_time"
                 android:layout_weight="1"
-                android:textSize="15dp"
-                />
+                android:text="@string/date_and_time"
+                android:textColor="@color/orange"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/select"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@color/orange"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
                 android:text="Select"
                 android:textColor="@color/white"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:background="@color/material_dynamic_primary0"
-                />
+                tools:ignore="HardcodedText" />
 
         </LinearLayout>
+
         <Button
+            android:id="@+id/submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            app:cornerRadius="5dp"
-            android:id="@+id/submit"
-            android:background="@drawable/gray_stroke"
+            android:background="@color/orange"
             android:text="Submit"
-            android:textSize="15dp"
-
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText"
+            android:textStyle="bold"
+            app:cornerRadius="5dp" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel"
+            style="@style/Widget.Material3.Button.TextButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            app:cornerRadius="5dp"
-            style="@style/Widget.Material3.Button.TextButton"
-            app:strokeColor="@color/black"
-            android:id="@+id/cancel"
-            android:text="CANCEL"
-            android:textSize="15dp"
+            android:background="@color/white"
+            android:clickable="true"
             android:fontFamily="monospace"
+            android:text="CANCEL"
+            tools:ignore="HardcodedText"
+            android:textColor="@color/orange"
+            android:textSize="15sp"
             android:textStyle="bold"
-            app:strokeWidth="2dp"
-            android:textColor="@color/black"/>
+            app:backgroundTint="@color/white"
+            app:cornerRadius="5dp"
+            app:strokeColor="@color/black"
+            app:strokeWidth="2dp" />
 
     </LinearLayout>
 

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.calendar.MonthlyCalendarFragment">
+
+    <CalendarView
+        android:id="@+id/monthlyCalendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="37dp"
+        android:background="@drawable/bottom_navigation_bg"
+        android:weekDayTextAppearance="@color/orange"
+        android:firstDayOfWeek="@integer/material_motion_duration_long_1"
+        tools:ignore="Suspicious0dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+         android:layout_weight="80"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        android:paddingEnd="20dp"
+        android:layout_gravity="end"
+        tools:ignore="RtlSymmetry">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabDaily"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="1dp"
+            android:backgroundTint="#0E0E0E"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="60dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/daycalendar" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabWeekly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="1dp"
+            android:backgroundTint="#0E0E0E"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="40dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/weekcalendar" />
+
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabHome"
+            android:layout_width="52dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="1dp"
+            android:backgroundTint="#0E0E0E"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/home" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

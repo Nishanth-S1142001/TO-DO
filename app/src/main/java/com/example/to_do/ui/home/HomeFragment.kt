@@ -7,10 +7,17 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
+import com.example.to_do.R
 import com.example.to_do.databinding.FragmentHomeBinding
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.snackbar.Snackbar
 
 class HomeFragment : Fragment() {
 
+    private lateinit var floatingActionButton : FloatingActionButton
     private var _binding: FragmentHomeBinding? = null
 
     // This property is only valid between onCreateView and
@@ -23,9 +30,17 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
+
+
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
+     //   val viewHome: View = inflater.inflate(R.layout.fragment_home, container, false)
+       binding.fabHome.setOnClickListener{ viewHome ->
+            Snackbar.make(viewHome, "Do not forget to set a reminder to keep up with your task!", Snackbar.LENGTH_LONG)
+                //         .setAction("Action", null)
+                .setAnchorView(R.id.fabHome).show()
+                Navigation.findNavController(viewHome).navigate(R.id.nav_reminder)
 
-
+        }
         return binding.root
     }
 

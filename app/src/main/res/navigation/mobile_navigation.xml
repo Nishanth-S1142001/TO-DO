@@ -17,11 +17,7 @@
         android:label="Reminder"
         tools:layout="@layout/fragment_addreminder" />
 
-    <fragment
-        android:id="@+id/nav_share"
-        android:name="com.example.to_do.ui.shareTask.ShareTaskFragment"
-        android:label="Share Task"
-        tools:layout="@layout/fragment_share_task" />
+
     <fragment
         android:id="@+id/nav_favourite"
         android:name="com.example.to_do.ui.favTask.FavTaskFragment"
@@ -75,5 +71,28 @@
         android:name="com.example.to_do.ui.dummy.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_dummy" />
+    <fragment
+        android:id="@+id/nav_dailyCalendar"
+        android:name="com.example.to_do.ui.calendar.DailyCalendarFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_daily_calendar"
+    />
+    <fragment
+        android:id="@+id/nav_weeklyCalendar"
+        android:name="com.example.to_do.ui.calendar.WeeklyCalendarFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_weekly_calendar" />
+
+    <fragment
+        android:id="@+id/nav_monthlyCalendar"
+        android:name="com.example.to_do.ui.calendar.MonthlyCalendarFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_monthly_calendar" />
+
+    <fragment
+        android:id="@+id/nav_progress"
+        android:name="com.example.to_do.ui.progress.ProgressFragment"
+        android:label="@string/menu_progress"
+        tools:layout="@layout/fragment_progress" />
 
 </navigation>

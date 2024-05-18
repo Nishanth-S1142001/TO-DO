@@ -1,8 +1,10 @@
 package com.example.to_do.ui.reminder
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Intent
+import android.content.res.Resources
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -16,6 +18,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.NotificationManagerCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.workDataOf
@@ -23,6 +26,7 @@ import com.example.to_do.R
 import com.example.to_do.databinding.FragmentAddreminderBinding
 import com.example.to_do.databinding.ReminderDialogBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.snackbar.Snackbar
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -43,17 +47,25 @@ class ReminderFragment : Fragment() {
         val root: View = binding.root
 
         binding.addReminder.setOnClickListener(View.OnClickListener { addReminder() })
-        return root
+        binding.fabReminder.setOnClickListener{ viewHome ->
+            Snackbar.make(viewHome, "Do not forget to set a reminder to keep up with your task!", Snackbar.LENGTH_LONG)
+                //         .setAction("Action", null)
+                .setAnchorView(R.id.fabReminder).show()
+            Navigation.findNavController(viewHome).navigate(R.id.nav_home)
 
+        }
+        return binding.root
     }
 
-        private fun addReminder() {
+
+    private  fun addReminder() {
             if (Build.VERSION.SDK_INT >= 33 && !NotificationManagerCompat.from(requireContext())
                     .areNotificationsEnabled()
             ) {
                 showNotificationPermissionDialog()
             } else {
                 addReminderDialog()
+
             }
         }
 
@@ -115,6 +127,7 @@ class ReminderFragment : Fragment() {
 
     }
 
+          @SuppressLint("InflateParams", "UseCompatLoadingForDrawables")
           private fun addReminderDialog()
           {
               val dialogBinding = ReminderDialogBinding.bind(layoutInflater.inflate(R.layout.reminder_dialog,null))
@@ -125,6 +138,9 @@ class ReminderFragment : Fragment() {
               dialogBinding.reminderType.adapter = ArrayAdapter<String>(requireContext(),
                                                       android.R.layout.simple_spinner_dropdown_item,
                                                       resources.getStringArray(R.array.ReminderTypes))
+
+              dialogBinding.reminderType.setPopupBackgroundDrawable(resources.getDrawable(R.drawable.bottom_navigation_bg))
+
               val pickedDate  = Calendar.getInstance()
 
               dialogBinding.select.setOnClickListener {
@@ -138,12 +154,12 @@ class ReminderFragment : Fragment() {
                   DatePickerDialog(requireContext(),
                       DatePickerDialog.OnDateSetListener
                       {
-                          view, year, month, dayOfMonth ->
+                         _, _, _, dayOfMonth ->
                           // show Time Picker
                       TimePickerDialog(requireContext(),
                           TimePickerDialog.OnTimeSetListener
                           {
-                              view, hourOfDay, minute ->
+                                  _, hourOfDay, minute ->
                               pickedDate.set(year,month,dayOfMonth,hourOfDay,minute)
                               Log.d("Date and Time","Picked date and time $pickedDate")
                               dialogBinding.dateTime.text = getCurrentDateAndTime(pickedDate.timeInMillis)

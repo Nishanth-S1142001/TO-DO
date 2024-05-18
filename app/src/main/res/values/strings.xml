@@ -29,9 +29,15 @@
 
     <string name="menu_slideshow">Slideshow</string>
     <string name="menu_dummy">Dummy</string>
-
+    <string name="menu_calendar">Calendar</string>
+    <string name="menu_progress">Progress</string>
 
     <string name="title">Title</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="todo">TODO</string>
+    <string name="daily_calendar">Daily Calendar</string>
+    <string name="weekly_calendar">Weekly Calendar</string>
+    <string name="monthly_calendar">Monthly Calendar</string>
+
 </resources>

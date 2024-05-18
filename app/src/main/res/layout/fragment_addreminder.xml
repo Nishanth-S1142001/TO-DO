@@ -40,16 +40,42 @@
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:layout_gravity="bottom"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
             android:width="10sp"
             android:height="20dp"
-            android:layout_marginStart="60dp"
             android:background="@drawable/button_format_plain"
             android:text="Task List?"
             android:textColor="@color/red"
-            android:layout_marginEnd="20dp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="80" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="20dp"
+        android:gravity="end"
+
+        >
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabReminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="1dp"
+            android:backgroundTint="#0E0E0E"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/home"
+               />
+
+    </LinearLayout>
 </LinearLayout>
