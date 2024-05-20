@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="ADD REMAINDER"
+            android:text="ADD EVENT"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -63,7 +63,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Reminder Type"
+            android:text="Event Type"
             android:textColorHint="@color/white"
             android:textColor="@color/orange"
             android:textSize="14sp"
@@ -97,6 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:id="@+id/dateTimeLayout"
             android:background="@drawable/button_format_gradient"
             android:orientation="horizontal">
 
@@ -125,6 +126,37 @@
                 tools:ignore="HardcodedText" />
 
         </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlNotes"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Notes"
+            android:textColor="@color/white"
+            app:boxStrokeColor="@color/black"
+            app:hintTextColor="@color/white"
+            app:boxStrokeWidth="2dp"
+            app:startIconDrawable="@drawable/edit_note"
+            app:startIconTint="@color/orange"
+            android:textColorHint="@color/red"
+            app:strokeColor="@color/black">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/orange"
+                android:textColorHint="@color/orange"
+                android:textStyle="bold"
+                android:lines="3"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/submit"

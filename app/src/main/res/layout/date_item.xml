@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_calendar"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="2dp"
+    android:backgroundTint="@color/orange"
+    app:cardElevation="5dp"
+ >
+
+    <LinearLayout
+        android:layout_width="70dp"
+        android:layout_height="78dp"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/calendar_day"
+            style="@style/TextAppearance.MaterialComponents.Overline"
+            android:layout_width="70dp"
+            android:layout_height="29dp"
+            android:background="@color/white"
+            android:gravity="center"
+
+            android:paddingHorizontal="3dp"
+            android:text="Sun"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/orange" />
+
+        <TextView
+            android:id="@+id/calendar_date"
+            style="@style/TextAppearance.MaterialComponents.Overline"
+            android:layout_width="37dp"
+            android:layout_height="29dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="7"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -47,7 +47,7 @@ class MonthlyCalendarFragment : Fragment() {
         }
         binding.fabWeekly.setOnClickListener{ viewHome ->
 
-            Navigation.findNavController(viewHome).navigate(R.id.nav_monthlyCalendar)
+            Navigation.findNavController(viewHome).navigate(R.id.nav_weeklyCalendar)
 
         }
         return binding.root

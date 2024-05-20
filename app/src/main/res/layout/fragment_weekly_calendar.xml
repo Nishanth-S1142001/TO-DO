@@ -3,17 +3,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_gravity="right"
     tools:context=".ui.calendar.WeeklyCalendarFragment">
 
 
-    <TextView
-        android:id="@+id/textView2"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="This is Weekly" />
-    />
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:padding="3dp">
+
+        <TextView
+            android:id="@+id/weekly_picker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="80"
+            android:background="@color/white"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:inputType="none"
+            android:backgroundTint="@color/orange"
+
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColorHint="@color/white"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"
+            android:text="Hello World"
+            android:textColor="@color/white"
+            app:drawableEndCompat="@drawable/arrow_down" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/calendar_view"
+        android:layout_marginVertical="10dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/date_item"/>
 
 
     <View
@@ -38,7 +71,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="1dp"
-            android:backgroundTint="#0E0E0E"
+            android:backgroundTint="#FFF3F3"
             android:layout_marginEnd="20dp"
             android:layout_marginStart="50dp"
             android:contentDescription="@string/todo"
@@ -50,7 +83,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="1dp"
-            android:backgroundTint="#0E0E0E"
+            android:backgroundTint="#FFF3F3"
             android:layout_marginEnd="20dp"
             android:layout_marginStart="40dp"
             android:contentDescription="@string/todo"
@@ -64,7 +97,7 @@
             android:layout_marginEnd="40dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="1dp"
-            android:backgroundTint="#0E0E0E"
+            android:backgroundTint="#FFF3F3"
             android:contentDescription="@string/todo"
             android:src="@drawable/home" />
 
