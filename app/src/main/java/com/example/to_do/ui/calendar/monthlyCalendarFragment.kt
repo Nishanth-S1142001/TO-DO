@@ -9,8 +9,6 @@ import androidx.core.graphics.toColor
 import androidx.navigation.Navigation
 import com.example.to_do.R
 import com.example.to_do.databinding.FragmentMonthlyCalendarBinding
-import com.google.android.material.snackbar.Snackbar
-import com.google.common.io.Resources
 
 
 class MonthlyCalendarFragment : Fragment() {
@@ -23,7 +21,7 @@ class MonthlyCalendarFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentMonthlyCalendarBinding.inflate(inflater, container, false)
         binding.monthlyCalendarView.dateTextAppearance.toColor()

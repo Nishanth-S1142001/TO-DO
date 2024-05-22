@@ -7,13 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.to_do.R
 
-// TODO: Rename parameter arguments, choose names that match
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ThemesFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ThemesFragment : Fragment() {
 
     override fun onCreateView(

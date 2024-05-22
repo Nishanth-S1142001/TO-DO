@@ -9,11 +9,7 @@ import com.example.to_do.R
 
 
 
-/**
- * A simple [Fragment] subclass.
- * Use the [InviteFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class InviteFragment : Fragment() {
 
     override fun onCreateView(

@@ -4,20 +4,19 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
+
 import com.example.to_do.R
 import com.example.to_do.databinding.FragmentHomeBinding
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+
 import com.google.android.material.snackbar.Snackbar
 
 class HomeFragment : Fragment() {
 
-    private lateinit var floatingActionButton : FloatingActionButton
+
     private var _binding: FragmentHomeBinding? = null
 
     // This property is only valid between onCreateView and

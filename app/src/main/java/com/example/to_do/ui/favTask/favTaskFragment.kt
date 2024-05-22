@@ -10,11 +10,7 @@ import com.example.to_do.R
 
 
 
-/**
- * A simple [Fragment] subclass.
- * Use the [FavTaskFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class FavTaskFragment : Fragment() {
 
 

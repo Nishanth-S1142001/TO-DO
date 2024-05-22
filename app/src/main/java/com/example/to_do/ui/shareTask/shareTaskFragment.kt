@@ -8,11 +8,6 @@ import android.view.ViewGroup
 import com.example.to_do.R
 
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ShareTaskFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ShareTaskFragment : Fragment() {
 
     override fun onCreateView(

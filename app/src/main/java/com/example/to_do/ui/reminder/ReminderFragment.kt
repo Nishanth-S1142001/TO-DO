@@ -17,8 +17,8 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.NotificationManagerCompat
-import androidx.core.content.ContentProviderCompat.requireContext
-import androidx.core.view.isVisible
+
+
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.work.OneTimeWorkRequestBuilder
@@ -65,8 +65,6 @@ class ReminderFragment : Fragment() {
             .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully written!") }
             .addOnFailureListener { e -> Log.w(TAG, "Error writing document", e) }
         _binding = FragmentAddreminderBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
 
         binding.addReminder.setOnClickListener(View.OnClickListener { addReminder() })
 

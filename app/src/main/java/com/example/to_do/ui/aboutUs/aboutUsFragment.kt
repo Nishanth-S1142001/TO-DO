@@ -8,11 +8,7 @@ import android.view.ViewGroup
 import com.example.to_do.R
 
 
-/**
- * A simple [Fragment] subclass.
- * Use the [AboutUsFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class AboutUsFragment : Fragment() {
 
 

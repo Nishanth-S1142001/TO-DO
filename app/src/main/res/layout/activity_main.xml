@@ -18,7 +18,7 @@
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/nav_view"
             android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="start"
             android:background="@drawable/navigation_background"
             android:fitsSystemWindows="true"
@@ -28,8 +28,6 @@
             app:itemTextColor="@color/red"
             app:menu="@menu/activity_main_drawer"
             app:subheaderColor="@color/black"/>
-
-
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

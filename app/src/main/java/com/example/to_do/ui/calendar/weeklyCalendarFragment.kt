@@ -1,8 +1,6 @@
 package com.example.to_do.ui.calendar
 
-import android.app.AlertDialog
-import android.content.res.Resources
-import android.content.res.Resources.Theme
+
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -10,7 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.fragment.app.FragmentManager
+
 import androidx.navigation.Navigation
 import com.example.to_do.R
 
@@ -26,7 +24,7 @@ class WeeklyCalendarFragment : Fragment(), CalendarAdapter.CalendarInterface {
 
     companion object
     {
-        private val TAG = "WeeklyCalendarFragment"
+        private const val TAG = "WeeklyCalendarFragment"
     }
 
 
@@ -39,7 +37,7 @@ class WeeklyCalendarFragment : Fragment(), CalendarAdapter.CalendarInterface {
     private val calendarList  = ArrayList<CalendarData>()
     private val binding get() = _binding!!
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+                              savedInstanceState: Bundle?): View {
 
         _binding = FragmentWeeklyCalendarBinding.inflate(inflater, container, false)
         binding.fabHome.setOnClickListener{ viewHome ->
@@ -131,7 +129,7 @@ class WeeklyCalendarFragment : Fragment(), CalendarAdapter.CalendarInterface {
 
     override fun onSelect(calendarData: CalendarData, position: Int, day: TextView) {
        calendarList.forEachIndexed{
-                                  index, calendarData ->
+                                  index, _ ->
            calendarData.isSelected = index == position
 
        }

@@ -7,11 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.to_do.R
 
-/**
- * A simple [Fragment] subclass.
- * Use the [FeedbackFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class FeedbackFragment : Fragment() {
 
     override fun onCreateView(

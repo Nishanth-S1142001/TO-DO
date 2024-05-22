@@ -54,7 +54,6 @@
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:textStyle="bold"
-
                 />
 
         </com.google.android.material.textfield.TextInputLayout>

@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.example.to_do.R
 import com.example.to_do.databinding.FragmentDailyCalendarBinding
-import com.example.to_do.databinding.FragmentMonthlyCalendarBinding
+
 
 class DailyCalendarFragment : Fragment() {
 
@@ -17,7 +17,7 @@ class DailyCalendarFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentDailyCalendarBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         binding.fabHome.setOnClickListener{ viewHome ->

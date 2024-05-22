@@ -67,26 +67,21 @@
         tools:layout="@layout/fragment_settings" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.to_do.ui.dummy.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_dummy" />
-    <fragment
         android:id="@+id/nav_dailyCalendar"
         android:name="com.example.to_do.ui.calendar.DailyCalendarFragment"
-        android:label="@string/menu_slideshow"
+        android:label="@string/daily_calendar"
         tools:layout="@layout/fragment_daily_calendar"
     />
     <fragment
         android:id="@+id/nav_weeklyCalendar"
         android:name="com.example.to_do.ui.calendar.WeeklyCalendarFragment"
-        android:label="@string/menu_slideshow"
+        android:label="@string/weekly_calendar"
         tools:layout="@layout/fragment_weekly_calendar" />
 
     <fragment
         android:id="@+id/nav_monthlyCalendar"
         android:name="com.example.to_do.ui.calendar.MonthlyCalendarFragment"
-        android:label="@string/menu_slideshow"
+        android:label="@string/monthly_calendar"
         tools:layout="@layout/fragment_monthly_calendar" />
 
     <fragment
@@ -94,5 +89,30 @@
         android:name="com.example.to_do.ui.progress.ProgressFragment"
         android:label="@string/menu_progress"
         tools:layout="@layout/fragment_progress" />
+
+    <fragment
+        android:id="@+id/nav_AIBot"
+        android:name="com.example.to_do.ui.aiBot.AIBotFragment"
+        android:label="AI Bot"
+        tools:layout="@layout/fragment_aibot" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.to_do.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+
+    <fragment
+        android:id="@+id/nav_invite"
+        android:name="com.example.to_do.ui.invite.InviteFragment"
+        android:label="Invite"
+        tools:layout="@layout/fragment_invite" />
+
+    <fragment
+        android:id="@+id/nav_logOut"
+        android:name="com.example.to_do.ui.logOut.LogOutFragment"
+        android:label="Log Out"
+        tools:layout="@layout/fragment_log_out" />
 
 </navigation>

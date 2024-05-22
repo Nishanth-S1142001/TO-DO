@@ -1,6 +1,7 @@
 package com.example.to_do.ui.calendar
 
-import android.content.res.Resources
+
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
@@ -33,8 +34,8 @@ class CalendarAdapter (private val calendarInterface: CalendarInterface,
             RecyclerView.ViewHolder(binding.root) {
 
             fun bind(calendarDataModel: CalendarData, position: Int) {
-                val calendar_day= binding.calendarDay
-                var calendar_date= binding.calendarDate
+                val calendarDay= binding.calendarDay
+                val calendarDate= binding.calendarDate
                 val cardView= binding.cardCalendar
                 if (pos == position) {
                     calendarDataModel.isSelected = true
@@ -43,10 +44,10 @@ class CalendarAdapter (private val calendarInterface: CalendarInterface,
                 if (calendarDataModel.isSelected)
                 {
                     pos = -1
-                    calendar_day.setTextColor(
+                    calendarDay.setTextColor(
                         ContextCompat.getColor(itemView.context, R.color.orange)
                     )
-                    calendar_date.setTextColor(
+                    calendarDate.setTextColor(
                         ContextCompat.getColor(itemView.context, R.color.blue)
                     )
                     cardView.setCardBackgroundColor(
@@ -55,21 +56,21 @@ class CalendarAdapter (private val calendarInterface: CalendarInterface,
                 }
                 else
                 {
-                    calendar_day.setTextColor(
+                    calendarDay.setTextColor(
                         ContextCompat.getColor(itemView.context, R.color.red)
                     )
-                    calendar_date.setTextColor(
+                    calendarDate.setTextColor(
                         ContextCompat.getColor(itemView.context, R.color.white)
                     )
                     cardView.setCardBackgroundColor(
                         ContextCompat.getColor(itemView.context, R.color.red)
                     )
                 }
-                calendar_day.text = calendarDataModel.calendarDay
-                calendar_date.text = calendarDataModel.calendarDate()
-                println("Calendar : ${calendar_date.text}")
+                calendarDay.text = calendarDataModel.calendarDay
+                calendarDate.text = calendarDataModel.calendarDate()
+                println("Calendar : ${calendarDate.text}")
                 cardView.setOnClickListener{
-                    calendarInterface.onSelect(calendarDataModel,adapterPosition,calendar_date)
+                    calendarInterface.onSelect(calendarDataModel,adapterPosition,calendarDate)
 
                 }
             }
@@ -85,6 +86,7 @@ class CalendarAdapter (private val calendarInterface: CalendarInterface,
             this.pos = pos
         }
 
+        @SuppressLint("NotifyDataSetChanged")
         fun updateList(calendarList:ArrayList<CalendarData>)
         {
             list.clear()

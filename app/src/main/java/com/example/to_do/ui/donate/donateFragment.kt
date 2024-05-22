@@ -9,11 +9,7 @@ import com.example.to_do.R
 
 
 
-/**
- * A simple [Fragment] subclass.
- * Use the [DonateFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class DonateFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

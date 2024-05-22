@@ -1,43 +1,49 @@
 <resources>
     <string name="app_name">TO_DO</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
+
     <string name="action_settings">Settings</string>
     <string name="action_invite">Invite</string>
     <string name="action_profile">Profile</string>
     <string name="action_logOut">Log Out</string>
+
     <string name="date_and_time"><![CDATA[DATE & TIME]]></string>
+
     <string name="taskList">Task List</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_taskReminder">Add a reminder</string>
-
     <string name="menu_share">Share my Task</string>
     <string name="menu_favourite">My Favourite</string>
-
     <string name="menu_themes">Choose a Theme</string>
     <string name="menu_widget">Add me to your Screen</string>
-
     <string name="menu_donate">Donate Us</string>
     <string name="menu_feedback">Write a Feedback</string>
     <string name="menu_FAQ">FAQ?</string>
     <string name="menu_about_us">Know about Us</string>
     <string name="menu_setting">Settings</string>
-
     <string name="menu_slideshow">Slideshow</string>
     <string name="menu_dummy">Dummy</string>
     <string name="menu_calendar">Calendar</string>
     <string name="menu_progress">Progress</string>
 
     <string name="title">Title</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="loaderText">A few moments...</string>
+
     <string name="todo">TODO</string>
+
     <string name="daily_calendar">Daily Calendar</string>
     <string name="weekly_calendar">Weekly Calendar</string>
     <string name="monthly_calendar">Monthly Calendar</string>
+    <string name="promptGreeting"><u><i>Hey there! \n Welcome to the TO-DO AI Support World! Let me know how I can be of help to you!!</i></u></string>
+    <string name="question"><u>Question???</u></string>
 
 </resources>
