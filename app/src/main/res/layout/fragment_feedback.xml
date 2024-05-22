@@ -1,14 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.feedback.FeedbackFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Feedback Fragment" />
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
 
-</FrameLayout>
+       <TextView
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="5dp"
+        android:padding="2dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="@string/write_to_us"
+        app:drawableStartCompat="@drawable/edit_note">
+       </TextView>
+
+
+       <ScrollView
+           android:id="@+id/scrollView_1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:padding="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="20dp"
+           android:layout_marginHorizontal="5dp"
+           android:textColor="@color/orange"
+           android:textSize="20sp"
+           android:textStyle="bold"
+           android:text="To:"
+           />
+
+       <EditText
+           android:id="@+id/toEt"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@color/black"
+           android:autofillHints="emailAddress"
+           android:inputType="textEmailAddress"
+           android:padding="10dp"
+           android:textColorHint="@color/gray"
+           android:textColor="@color/orange" />
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginHorizontal="5dp"
+           android:padding="2dp"
+           android:textSize="15sp"
+
+           android:textColorHint="@color/gray"
+           android:alpha="0.5"
+           android:textStyle="italic"
+           android:text="@string/multipleEmail"
+           />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="5dp"
+            android:textColorHint="@color/gray"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/orange"
+            android:text="Subject:"
+            />
+
+        <EditText
+            android:id="@+id/subjectEt"
+            android:lines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="subject....ex: AI Assistant"
+            android:background="@color/black"
+            android:textColorHint="@color/gray"
+            android:padding="10dp"
+            android:textColor="@color/orange" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="5dp"
+            android:textColor="@color/orange"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Body:"
+            />
+
+            <EditText
+
+                android:id="@+id/bodyEt"
+                android:layout_width="match_parent"
+                android:layout_height="267dp"
+                android:background="@color/black"
+                android:hint="@string/decorum"
+                android:gravity="top|left"
+                android:textAlignment="gravity"
+                android:inputType="textAutoComplete"
+                android:maxLines="20"
+                android:padding="10dp"
+                android:textColor="@color/orange"
+                android:textColorHint="@color/gray"
+                tools:ignore="RtlHardcoded" />
+
+            <Button
+                android:id="@+id/composeEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:background="@drawable/darrow"
+                android:gravity="center_vertical"
+                android:textColor="@color/orange"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                tools:ignore="SmallSp" />
+        </LinearLayout>
+
+       </ScrollView>
+
+</LinearLayout>
+</RelativeLayout>

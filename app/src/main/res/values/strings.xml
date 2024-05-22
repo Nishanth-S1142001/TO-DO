@@ -45,5 +45,9 @@
     <string name="monthly_calendar">Monthly Calendar</string>
     <string name="promptGreeting"><u><i>Hey there! \n Welcome to the TO-DO AI Support World! Let me know how I can be of help to you!!</i></u></string>
     <string name="question"><u>Question???</u></string>
+    <string name="decorum"> <i><b>Tips \n\nDouble-check the address</b>: Ensure you\'re sending \nit to the correct person.\n<b>Maintain a professional tone</b>:<u>Avoid using \noverly casual language, slang, or emojis.</u>
+                                    \nEven if you disagree with \nsomeone,<u> express your opinion politely \nand avoid accusatory language.</u></i></string>
+    <string name="multipleEmail">Send email to multiple emails by entering comma(,) separated emails</string>
+    <string name="write_to_us"><u>Write to us..,</u></string>
 
 </resources>

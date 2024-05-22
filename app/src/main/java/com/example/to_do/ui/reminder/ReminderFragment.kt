@@ -286,7 +286,7 @@ MaterialAlertDialogBuilder(requireContext(),com.google.android.material.R.style.
             .setInitialDelay(delay,TimeUnit.SECONDS)
             .setInputData(
                 workDataOf(
-                    "Title" to "Todo: $remainderType",
+                    "Title" to "Reminder: $remainderType",
                     "Message" to title
                 )
             ).build()
